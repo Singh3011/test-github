@@ -22,13 +22,13 @@ jobs:
     - name: setup NodeJs Version
       uses: actions/setup-node@v3
       with:
-        node-version: 18
+        node-version: 20
 
     - name: Install dependencies
       run: npm install
 
     - name: Unit Testing
-      run: npm test
+      run: npm run coverage
       
     - name: Upload artifacts
       uses: actions/upload-artifact@v3
