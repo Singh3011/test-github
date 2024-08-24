@@ -28,13 +28,13 @@ jobs:
       run: npm install
 
     - name: Unit Testing
-      run: npm run coverage
+      run: npm test
       
     - name: Upload artifacts
       uses: actions/upload-artifact@v3
       with:
-        name: Code-coverage Result
-        path: coverage
+        name: Mocha Test result
+        path: test-results.xml
         retention-days: 10
 
       
